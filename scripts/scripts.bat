@@ -1,5 +1,7 @@
 @echo off
 title Various Scripts
+echo github.com/shadowelixir
+echo youtube.com/@shadowelixir
 echo Press 1 to Activate Windows (MAS By MassGrave)
 echo Press 2 to Activate IDM (IDM Activation Script by lstprjct)
 echo Press 3 to Debloat Windows (winutil by Chris Titus Tech)
