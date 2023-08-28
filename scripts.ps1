@@ -30,38 +30,6 @@ $Author.location                 = New-Object System.Drawing.Point(35,75)
 $Author.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',11,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Italic))
 $Author.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 
-$Github                          = New-Object system.Windows.Forms.Label
-$Github.text                     = "/ShadowElixir"
-$Github.AutoSize                 = $true
-$Github.width                    = 25
-$Github.height                   = 10
-$Github.location                 = New-Object System.Drawing.Point(120,340)
-$Github.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',34)
-$Github.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-
-$GithubLogo                     = New-Object system.Windows.Forms.PictureBox
-$GithubLogo.width               = 138
-$GithubLogo.height              = 80
-$GithubLogo.location            = New-Object System.Drawing.Point(10,325)
-$GithubLogo.imageLocation       = "https://i.imgur.com/5ggdeCE.png"
-$GithubLogo.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
-
-$YouTube                          = New-Object system.Windows.Forms.Label
-$YouTube.text                     = "/@shadowelixir"
-$YouTube.AutoSize                 = $true
-$YouTube.width                    = 25
-$YouTube.height                   = 10
-$YouTube.location                 = New-Object System.Drawing.Point(120,420)
-$YouTube.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',34)
-$YouTube.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-
-$YouTubeLogo                     = New-Object system.Windows.Forms.PictureBox
-$YouTubeLogo.width               = 138
-$YouTubeLogo.height              = 50
-$YouTubeLogo.location            = New-Object System.Drawing.Point(10,420)
-$YouTubeLogo.imageLocation       = "https://i.imgur.com/4tAjnkA.png"
-$YouTubeLogo.SizeMode            = [System.Windows.Forms.PictureBoxSizeMode]::zoom
-
 $ActivateWindows                 = New-Object system.Windows.Forms.Button
 $ActivateWindows.text            = "Activate Windows"
 $ActivateWindows.width           = 123
@@ -128,6 +96,6 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$Github,$GithubLogo,$YouTube,$YouTubeLogo,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$noahOS,$Batch))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$noahOS,$Batch))
 
 [void]$Form.ShowDialog()
