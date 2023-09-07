@@ -71,7 +71,7 @@ $ShadowOS.location               = New-Object System.Drawing.Point(238,171)
 $ShadowOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $ShadowOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $ShadowOS.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm https://raw.githubusercontent.com/ShadowElixir/VariousScripts/main/scripts/shadowos.ps1 | iex" }
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
 })
 
 $noahOS                          = New-Object system.Windows.Forms.Button
