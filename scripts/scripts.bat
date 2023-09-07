@@ -12,6 +12,6 @@ set /p homeoption=
 if %homeoption% == 1 powershell "irm massgrave.dev/get | iex"
 if %homeoption% == 2 powershell "irm cutt.ly/idmactivation | iex"
 if %homeoption% == 3 powershell "irm christitus.com/win | iex"
-if %homeoption% == 4 powershell "irm https://raw.githubusercontent.com/ShadowElixir/VariousScripts/main/scripts/shadowos.ps1 | iex"
+if %homeoption% == 4 powershell "irm cutt.ly/shadowos | iex"
 if %homeoption% == 5 powershell "irm cutt.ly/noahos | iex"
 if %homeoption% == 6 powershell "irm cutt.ly/manyscripts | iex"
