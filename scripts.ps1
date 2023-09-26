@@ -74,15 +74,15 @@ $ShadowOS.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
 })
 
-$noahOS                          = New-Object system.Windows.Forms.Button
-$noahOS.text                     = "Launch noahOS"
-$noahOS.width                    = 123
-$noahOS.height                   = 41
-$noahOS.location                 = New-Object System.Drawing.Point(238,239)
-$noahOS.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$noahOS.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$noahOS.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/noahos | iex" }
+$Sweepy                          = New-Object system.Windows.Forms.Button
+$Sweepy.text                     = "Launch Sweepy"
+$Sweepy.width                    = 123
+$Sweepy.height                   = 41
+$Sweepy.location                 = New-Object System.Drawing.Point(238,239)
+$Sweepy.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$Sweepy.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$Sweepy.Add_Click({
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/sweepy | iex" }
 })
 
 $Batch                           = New-Object system.Windows.Forms.Button
@@ -96,6 +96,6 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$noahOS,$Batch))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$Sweepy,$Batch))
 
 [void]$Form.ShowDialog()
