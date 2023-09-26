@@ -1,11 +1,11 @@
 # Got code from https://github.com/lstprjct/IDM-Activation-Script, Thank You lstprjct and credits to you
-# NoahOS by NoahTheTechGenius
+# Sweepy by TrisoSoft
 # Enable TLSv1.2 for compatibility with older clients
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
-$DownloadURL = 'https://raw.githubusercontent.com/ShadowElixir/VariousScripts/main/scripts/noahos.bat'
+$DownloadURL = 'https://raw.githubusercontent.com/TrisoSoft/Sweepy/main/assistant.bat'
 
-$FilePath = "$env:TEMP\noahos.bat"
+$FilePath = "$env:TEMP\assistant.bat"
 
 try {
     Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing -OutFile $FilePath
