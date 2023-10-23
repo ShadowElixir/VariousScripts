@@ -5,7 +5,7 @@
 
 $DownloadURL = 'https://raw.githubusercontent.com/Morpies/AppLauncher/main/app.bat'
 
-$FilePath = "$env:TEMP\app.bat"
+$FilePath = "$env:TEMP\applauncher.bat"
 
 try {
     Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing -OutFile $FilePath
