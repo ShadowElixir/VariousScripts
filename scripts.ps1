@@ -74,15 +74,15 @@ $ShadowOS.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
 })
 
-$Sweepy                          = New-Object system.Windows.Forms.Button
-$Sweepy.text                     = "Launch Sweepy"
-$Sweepy.width                    = 123
-$Sweepy.height                   = 41
-$Sweepy.location                 = New-Object System.Drawing.Point(238,239)
-$Sweepy.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$Sweepy.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$Sweepy.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/sweepy | iex" }
+$AppLauncher                          = New-Object system.Windows.Forms.Button
+$AppLauncher.text                     = "Launch AppLauncher"
+$AppLauncher.width                    = 123
+$AppLauncher.height                   = 41
+$AppLauncher.location                 = New-Object System.Drawing.Point(238,239)
+$AppLauncher.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$AppLauncher.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$AppLauncher.Add_Click({
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/appslauncher | iex" }
 })
 
 $Batch                           = New-Object system.Windows.Forms.Button
@@ -96,6 +96,6 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$Sweepy,$Batch))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$AppLauncher,$Batch))
 
 [void]$Form.ShowDialog()
