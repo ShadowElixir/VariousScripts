@@ -1,11 +1,11 @@
 # Got code from https://github.com/lstprjct/IDM-Activation-Script, Thank You lstprjct and credits to you
-# AppLauncher by Morpies
+# Sweepy by TrisoMorpy
 # Enable TLSv1.2 for compatibility with older clients
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
-$DownloadURL = 'https://raw.githubusercontent.com/Morpies/AppLauncher/main/app.bat'
+$DownloadURL = 'https://raw.githubusercontent.com/TrisoMorpy/Sweepy/main/assistant.bat'
 
-$FilePath = "$env:TEMP\applauncher.bat"
+$FilePath = "$env:TEMP\assistant.bat"
 
 try {
     Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing -OutFile $FilePath
