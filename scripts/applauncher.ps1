@@ -3,9 +3,9 @@
 # Enable TLSv1.2 for compatibility with older clients
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
-$DownloadURL = 'https://raw.githubusercontent.com/TrisoMorpy/Sweepy/main/assistant.bat'
+$DownloadURL = 'https://raw.githubusercontent.com/Boopki/AppLauncher/main/applauncher.bat'
 
-$FilePath = "$env:TEMP\assistant.bat"
+$FilePath = "$env:TEMP\applauncher.bat"
 
 try {
     Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing -OutFile $FilePath
