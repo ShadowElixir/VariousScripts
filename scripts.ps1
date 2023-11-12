@@ -74,15 +74,15 @@ $ShadowOS.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
 })
 
-$AppLauncher                          = New-Object system.Windows.Forms.Button
-$AppLauncher.text                     = "Launch AppLauncher"
-$AppLauncher.width                    = 123
-$AppLauncher.height                   = 41
-$AppLauncher.location                 = New-Object System.Drawing.Point(238,239)
-$AppLauncher.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$AppLauncher.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$AppLauncher.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/appslauncher | iex" }
+$pcOS                            = New-Object system.Windows.Forms.Button
+$pcOS.text                       = "Launch pcOS"
+$pcOS.width                      = 123
+$pcOS.height                     = 41
+$pcOS.location                   = New-Object System.Drawing.Point(238,239)
+$pcOS.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$pcOS.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$pcOS.Add_Click({
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/pcOS | iex" }
 })
 
 $Batch                           = New-Object system.Windows.Forms.Button
@@ -96,6 +96,6 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$AppLauncher,$Batch))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$pcOS,$Batch))
 
 [void]$Form.ShowDialog()
