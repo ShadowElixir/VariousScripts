@@ -1,8 +1,3 @@
-<# 
-.NAME
-    Various Scripts
-#>
-
 Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
@@ -74,15 +69,16 @@ $ShadowOS.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
 })
 
-$pcOS                            = New-Object system.Windows.Forms.Button
-$pcOS.text                       = "Launch pcOS"
-$pcOS.width                      = 123
-$pcOS.height                     = 41
-$pcOS.location                   = New-Object System.Drawing.Point(238,239)
-$pcOS.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$pcOS.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$pcOS.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/pcOS | iex" }
+$JustGuitars                            = New-Object system.Windows.Forms.Button
+$JustGuitars.text                       = "Launch 
+Just Guitars"
+$JustGuitars.width                      = 123
+$JustGuitars.height                     = 41
+$JustGuitars.location                   = New-Object System.Drawing.Point(238,239)
+$JustGuitars.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$JustGuitars.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$JustGuitars.Add_Click({
+    Start-Job -ScriptBlock { powershell "start "" https://cutt.ly/justguitars" }
 })
 
 $Batch                           = New-Object system.Windows.Forms.Button
@@ -96,6 +92,6 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$pcOS,$Batch))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$JustGuitars,$Batch))
 
 [void]$Form.ShowDialog()
