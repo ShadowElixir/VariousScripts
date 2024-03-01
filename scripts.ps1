@@ -44,7 +44,7 @@ $ActivateIDM.location            = New-Object System.Drawing.Point(41,239)
 $ActivateIDM.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $ActivateIDM.ForeColor           = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $ActivateIDM.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/idmactivation | iex" }
+    Start-Job -ScriptBlock { powershell "irm https://massgrave.dev/ias | iex" }
 })
 
 $DebloatWindows                  = New-Object system.Windows.Forms.Button
