@@ -12,7 +12,7 @@ echo ---------------------------------------------------------------------------
 set /p homeoption=
 if %homeoption% == 1 powershell "irm massgrave.dev/get | iex"
 if %homeoption% == 2 powershell "irm christitus.com/win | iex"
-if %homeoption% == 3 powershell "irm cutt.ly/powerprofile | iex"
+if %homeoption% == 3 pwsh "irm cutt.ly/powerprofile | iex"
 if %homeoption% == 4 powershell "irm cutt.ly/shadowos | iex"
 if %homeoption% == 5 start "" https://cutt.ly/justguitars
 if %homeoption% == 6 powershell "irm cutt.ly/manyscripts | iex"
