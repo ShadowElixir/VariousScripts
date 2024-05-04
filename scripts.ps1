@@ -36,26 +36,26 @@ $ActivateWindows.Add_Click({
     Start-Job -ScriptBlock { powershell "irm massgrave.dev/get | iex" }
 })
 
-$ActivateIDM                     = New-Object system.Windows.Forms.Button
-$ActivateIDM.text                = "Activate IDM"
-$ActivateIDM.width               = 123
-$ActivateIDM.height              = 41
-$ActivateIDM.location            = New-Object System.Drawing.Point(41,239)
-$ActivateIDM.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$ActivateIDM.ForeColor           = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$ActivateIDM.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm https://massgrave.dev/ias | iex" }
-})
-
 $DebloatWindows                  = New-Object system.Windows.Forms.Button
 $DebloatWindows.text             = "Debloat Windows"
 $DebloatWindows.width            = 123
 $DebloatWindows.height           = 41
-$DebloatWindows.location         = New-Object System.Drawing.Point(41,313)
+$DebloatWindows.location         = New-Object System.Drawing.Point(41,239)
 $DebloatWindows.Font             = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $DebloatWindows.ForeColor        = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $DebloatWindows.Add_Click({
     Start-Job -ScriptBlock { powershell "irm christitus.com/win | iex" }
+})
+
+$BetterPwsh                     = New-Object system.Windows.Forms.Button
+$BetterPwsh.text                = "Better Powershell Profile"
+$BetterPwsh.width               = 123
+$BetterPwsh.height              = 41
+$BetterPwsh.location            = New-Object System.Drawing.Point(41,313)
+$BetterPwsh.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$BetterPwsh.ForeColor           = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$BetterPwsh.Add_Click({
+    Start-Job -ScriptBlock { powershell "irm https://massgrave.dev/ias | iex" }
 })
 
 $ShadowOS                        = New-Object system.Windows.Forms.Button
@@ -92,6 +92,6 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$ActivateIDM,$DebloatWindows,$ShadowOS,$JustGuitars,$Batch))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$ShadowOS,$JustGuitars,$Batch))
 
 [void]$Form.ShowDialog()
