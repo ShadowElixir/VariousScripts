@@ -101,6 +101,6 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$ShadowOS,$JustGuitars,$Batch))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$ShadowOS,$JustGuitars,$Batch))
 
 [void]$Form.ShowDialog()
