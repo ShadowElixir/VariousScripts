@@ -63,8 +63,8 @@ $Requirement.text                     = "*Requires Powershell Core 7"
 $Requirement.AutoSize                 = $true
 $Requirement.width                    = 25
 $Requirement.height                   = 10
-$Requirement.location                 = New-Object System.Drawing.Point(41,350)
-$Requirement.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',11,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Italic))
+$Requirement.location                 = New-Object System.Drawing.Point(41,355)
+$Requirement.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',8,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Italic))
 $Requirement.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 
 $ShadowOS                        = New-Object system.Windows.Forms.Button
