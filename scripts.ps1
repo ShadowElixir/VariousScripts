@@ -58,6 +58,15 @@ $BetterPwsh.Add_Click({
     Start-Job -ScriptBlock { powershell "irm https://massgrave.dev/ias | iex" }
 })
 
+$Requirement                          = New-Object system.Windows.Forms.Label
+$Requirement.text                     = "*Requires Powershell Core 7"
+$Requirement.AutoSize                 = $true
+$Requirement.width                    = 25
+$Requirement.height                   = 10
+$Requirement.location                 = New-Object System.Drawing.Point(41,350)
+$Requirement.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',11,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Italic))
+$Requirement.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+
 $ShadowOS                        = New-Object system.Windows.Forms.Button
 $ShadowOS.text                   = "Launch ShadowOS"
 $ShadowOS.width                  = 123
@@ -85,7 +94,7 @@ $Batch                           = New-Object system.Windows.Forms.Button
 $Batch.text                      = "CMD Version"
 $Batch.width                     = 123
 $Batch.height                    = 41
-$Batch.location                  = New-Object System.Drawing.Point(237,313)
+$Batch.location                  = New-Object System.Drawing.Point(238,313)
 $Batch.Font                      = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $Batch.ForeColor                 = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $Batch.Add_Click({
