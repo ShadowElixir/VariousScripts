@@ -101,6 +101,17 @@ $Batch.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$ShadowOS,$JustGuitars,$Batch))
+$StartMenu                           = New-Object system.Windows.Forms.Button
+$StartMenu.text                      = "VariousScripts >> Start Menu"
+$StartMenu.width                     = 250
+$StartMenu.height                    = 41
+$StartMenu.location                  = New-Object System.Drawing.Point(95,400)
+$StartMenu.Font                      = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$StartMenu.ForeColor                 = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$StartMenu.Add_Click({
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/manystart | iex" }
+})
+
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$ShadowOS,$JustGuitars,$Batch,$StartMenu))
 
 [void]$Form.ShowDialog()
