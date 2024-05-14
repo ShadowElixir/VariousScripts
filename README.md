@@ -1,5 +1,6 @@
 # Various Scripts
-![GUI](https://github.com/ShadowElixir/VariousScripts/assets/47082432/3bfba90a-1213-4552-845e-11f766097de0)
+![GUI](https://github.com/ShadowElixir/VariousScripts/assets/47082432/c9eeb64c-b25a-4bbd-8dbc-554965efb44d)
+
 
 Run GUI version by opening powershell and using either of these commands:
 ```
@@ -16,4 +17,5 @@ Run CMD version:
 irm cutt.ly/cmdscripts | iex
 ```
 
-![CMD](https://github.com/ShadowElixir/VariousScripts/assets/47082432/85458046-5612-4670-9aeb-6101e4d44487)
+![CMD](https://github.com/ShadowElixir/VariousScripts/assets/47082432/228c8e02-215b-415b-9c0d-7ccd1d9f5831)
+
