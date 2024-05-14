@@ -8,8 +8,11 @@ echo                     *Requires Powershell Core 7
 echo Press 4 to Launch ShadowOS (ShadowOS by ShadowElixir)
 echo Press 5 to Launch Just Guitars
 echo Press 6 to Launch GUI version of Various Scripts.
+
+echo Press 0 to add Various Scripts to the top of the start menu.
 echo ------------------------------------------------------------------------------------
 set /p homeoption=
+if %homeoption% == 0 powershell "irm cutt.ly/manystart | iex"
 if %homeoption% == 1 powershell "irm massgrave.dev/get | iex"
 if %homeoption% == 2 powershell "irm christitus.com/win | iex"
 if %homeoption% == 3 pwsh -Command "irm cutt.ly/powerprofile | iex"
