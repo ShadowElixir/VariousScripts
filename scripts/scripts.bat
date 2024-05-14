@@ -8,7 +8,7 @@ echo                     *Requires Powershell Core 7
 echo Press 4 to Launch ShadowOS (ShadowOS by ShadowElixir)
 echo Press 5 to Launch Just Guitars
 echo Press 6 to Launch GUI version of Various Scripts.
-
+echo  
 echo Press 0 to add Various Scripts to the top of the start menu.
 echo ------------------------------------------------------------------------------------
 set /p homeoption=
