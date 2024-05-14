@@ -17,7 +17,7 @@ if %vs5% == 1 goto gui5
 if %vs5% == 2 goto cmd5
 
 :pwshc
-echo Press 1 to use GUI version of VariousScripts.
+echo Press 1 to use GUI version of VariousScripts. (recommended)
 echo Press 2 to use CMD version of VariousScripts.
 echo ------------------------------------------------------------------------------------
 set /p vsc=
