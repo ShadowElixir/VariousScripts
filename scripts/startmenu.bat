@@ -1,5 +1,5 @@
 @echo off
-title Various Scripts - Start Menu
+title Various Scripts
 :start
 echo Press 1 to use Windows Powershell 5.1. (default; recommended)
 echo Press 2 to use Powershell Core.
