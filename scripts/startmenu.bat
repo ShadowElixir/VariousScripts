@@ -4,7 +4,7 @@ title Various Scripts
 echo Press 1 to use GUI version of VariousScripts. (recommended)
 echo Press 2 to use CMD version of VariousScripts.
 echo ------------------------------------------------------------------------------------
-set /p vs5=
+set /p vs=
 if %vs% == 1 goto gui
 if %vs% == 2 goto cmd
 
