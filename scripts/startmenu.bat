@@ -5,10 +5,10 @@ echo Press 1 to use GUI version of VariousScripts. (recommended)
 echo Press 2 to use CMD version of VariousScripts.
 echo ------------------------------------------------------------------------------------
 set /p vs=
-if %vs% == 1 goto gui
-if %vs% == 2 goto cmd
+if %vs% == 1 goto vs-gui
+if %vs% == 2 goto vs-cmd
 
-:gui
+:vs-gui
 echo Adding VariousScripts...
 echo @echo off >> "C:\VariousScripts\#ManyScripts.bat"
 echo powershell "irm cutt.ly/manyscripts | iex" >> "C:\VariousScripts\#ManyScripts.bat"
@@ -17,7 +17,7 @@ echo Done.
 pause
 exit
 
-:cmd
+:vs-cmd
 echo Adding VariousScripts...
 echo @echo off >> "C:\VariousScripts\#ManyScripts.bat"
 echo powershell "irm cutt.ly/cmdscripts | iex" >> "C:\VariousScripts\#ManyScripts.bat"
