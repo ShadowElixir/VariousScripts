@@ -67,15 +67,15 @@ $Requirement.location                 = New-Object System.Drawing.Point(41,355)
 $Requirement.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',8,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Italic))
 $Requirement.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 
-$ShadowOS                        = New-Object system.Windows.Forms.Button
-$ShadowOS.text                   = "Launch ShadowOS"
-$ShadowOS.width                  = 123
-$ShadowOS.height                 = 41
-$ShadowOS.location               = New-Object System.Drawing.Point(238,171)
-$ShadowOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$ShadowOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$ShadowOS.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
+$textOS                        = New-Object system.Windows.Forms.Button
+$textOS.text                   = "Launch textOS"
+$textOS.width                  = 123
+$textOS.height                 = 41
+$textOS.location               = New-Object System.Drawing.Point(238,171)
+$textOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$textOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$textOS.Add_Click({
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/TextOS | iex" }
 })
 
 $JustGuitars                            = New-Object system.Windows.Forms.Button
@@ -112,6 +112,6 @@ $StartMenu.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/manystart | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$ShadowOS,$JustGuitars,$Batch,$StartMenu))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$textOS,$JustGuitars,$Batch,$StartMenu))
 
 [void]$Form.ShowDialog()
