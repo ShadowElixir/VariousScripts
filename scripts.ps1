@@ -44,7 +44,7 @@ $DebloatWindows.location         = New-Object System.Drawing.Point(41,239)
 $DebloatWindows.Font             = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $DebloatWindows.ForeColor        = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $DebloatWindows.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm christitus.com/win | iex" }
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/debloat-windows | iex" }
 })
 
 $BetterPwsh                     = New-Object system.Windows.Forms.Button
