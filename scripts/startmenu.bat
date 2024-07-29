@@ -10,18 +10,22 @@ if %vs% == 2 goto vs-cmd
 
 :vs-gui
 echo Adding VariousScripts...
-echo @echo off >> "C:\VariousScripts\#ManyScripts.bat"
-echo powershell "irm cutt.ly/manyscripts | iex" >> "C:\VariousScripts\#ManyScripts.bat"
-powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\#ManyScripts.lnk');$s.TargetPath='C:\\VariousScripts\\#ManyScripts.bat';$s.Save()"
+mkdir "C:\Program Files\ShadowElixir\VariousScripts"
+powershell "Remove-Item C:\Program Files\ShadowElixir\VariousScripts\#ManyScripts.bat" -erroraction 'silentlycontinue'
+echo @echo off >> "C:\Program Files\ShadowElixir\VariousScripts\#ManyScripts.bat"
+echo powershell "irm cutt.ly/manyscripts | iex" >> "C:\Program Files\ShadowElixir\VariousScripts\#ManyScripts.bat"
+powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\#ManyScripts.lnk');$s.TargetPath='C:\\VariousScripts\\Program Files\\ShadowElixir\\VariousScripts\\#ManyScripts.bat';$s.Save()"
 echo Done.
 pause
 exit
 
 :vs-cmd
 echo Adding VariousScripts...
-echo @echo off >> "C:\VariousScripts\#ManyScripts.bat"
-echo powershell "irm cutt.ly/cmdscripts | iex" >> "C:\VariousScripts\#ManyScripts.bat"
-powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\#ManyScripts.lnk');$s.TargetPath='C:\\VariousScripts\\#ManyScripts.bat';$s.Save()"
+mkdir "C:\Program Files\ShadowElixir\VariousScripts"
+powershell "Remove-Item C:\Program Files\ShadowElixir\VariousScripts\#ManyScripts.bat" -erroraction 'silentlycontinue'
+echo @echo off >> "C:\Program Files\ShadowElixir\VariousScripts\#ManyScripts.bat"
+echo powershell "irm cutt.ly/cmdscripts | iex" >> "C:\Program Files\ShadowElixir\VariousScripts\#ManyScripts.bat"
+powershell "$s=(New-Object -COM WScript.Shell).CreateShortcut('C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\#ManyScripts.lnk');$s.TargetPath='C:\\VariousScripts\\Program Files\\ShadowElixir\\VariousScripts\\#ManyScripts.bat';$s.Save()"
 echo Done.
 pause
 exit
