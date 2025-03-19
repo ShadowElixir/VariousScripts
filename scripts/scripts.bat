@@ -13,7 +13,7 @@ echo Press 0 to add Various Scripts to the top of the start menu.
 echo ------------------------------------------------------------------------------------
 set /p homeoption=
 if %homeoption% == 0 powershell "irm cutt.ly/manystart | iex"
-if %homeoption% == 1 powershell "irm massgrave.dev/get | iex"
+if %homeoption% == 1 powershell "irm https://get.activated.win | iex"
 if %homeoption% == 2 powershell "irm cutt.ly/debloat-windows | iex"
 if %homeoption% == 3 pwsh -Command "irm cutt.ly/powerprofile | iex"
 if %homeoption% == 4 powershell "irm cutt.ly/shadowos | iex"
