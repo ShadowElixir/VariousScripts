@@ -33,7 +33,7 @@ $ActivateWindows.location        = New-Object System.Drawing.Point(41,171)
 $ActivateWindows.Font            = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $ActivateWindows.ForeColor       = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $ActivateWindows.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm massgrave.dev/get | iex" }
+    Start-Job -ScriptBlock { powershell "irm https://get.activated.win | iex" }
 })
 
 $DebloatWindows                  = New-Object system.Windows.Forms.Button
