@@ -71,23 +71,23 @@ $ShadowOS                        = New-Object system.Windows.Forms.Button
 $ShadowOS.text                   = "Launch ShadowOS"
 $ShadowOS.width                  = 123
 $ShadowOS.height                 = 41
-$ShadowOS.location               = New-Object System.Drawing.Point(238,171)
+$ShadowOS.location               = New-Object System.Drawing.Point(238,239)
 $ShadowOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $ShadowOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $ShadowOS.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
 })
 
-$JustGuitars                            = New-Object system.Windows.Forms.Button
-$JustGuitars.text                       = "Launch 
-Just Guitars"
-$JustGuitars.width                      = 123
-$JustGuitars.height                     = 41
-$JustGuitars.location                   = New-Object System.Drawing.Point(238,239)
-$JustGuitars.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$JustGuitars.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$JustGuitars.Add_Click({
-    Start-Job -ScriptBlock { powershell "start "" https://cutt.ly/justguitars" }
+$InstallStore                            = New-Object system.Windows.Forms.Button
+$InstallStore.text                       = "Install 
+Microsoft Store"
+$InstallStore.width                      = 123
+$InstallStore.height                     = 41
+$InstallStore.location                   = New-Object System.Drawing.Point(238,171)
+$InstallStore.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$InstallStore.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$InstallStore.Add_Click({
+    Start-Job -ScriptBlock { wsreset -i }
 })
 
 $Batch                           = New-Object system.Windows.Forms.Button
@@ -112,6 +112,6 @@ $StartMenu.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/manystart | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$ShadowOS,$JustGuitars,$Batch,$StartMenu))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$ShadowOS,$InstallStore,$Batch,$StartMenu))
 
 [void]$Form.ShowDialog()
