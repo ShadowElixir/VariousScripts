@@ -15,7 +15,7 @@ try {
 }
 
 if (Test-Path $FilePath) {
-    Start-Process $FilePath -Wait
+    Start-Process cmd.exe -ArgumentList "/c $FilePath /HWID" -Wait
     $item = Get-Item -LiteralPath $FilePath
     $item.Delete()
 }
