@@ -72,7 +72,7 @@ $InstallStore.text                       = "Install
 Microsoft Store"
 $InstallStore.width                      = 123
 $InstallStore.height                     = 41
-$InstallStore.location                   = New-Object System.Drawing.Point(238,239)
+$InstallStore.location                   = New-Object System.Drawing.Point(238,171)
 $InstallStore.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $InstallStore.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $InstallStore.Add_Click({
@@ -83,7 +83,7 @@ $PostInstall                            = New-Object system.Windows.Forms.Button
 $PostInstall.text                       = "PostInstall Script"
 $PostInstall.width                      = 123
 $PostInstall.height                     = 41
-$PostInstall.location                   = New-Object System.Drawing.Point(238,171)
+$PostInstall.location                   = New-Object System.Drawing.Point(238,239)
 $PostInstall.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $PostInstall.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $PostInstall.Add_Click({
@@ -94,7 +94,7 @@ $PostInstall.Add_Click({
 # $ShadowOS.text                   = "Launch ShadowOS"
 # $ShadowOS.width                  = 123
 # $ShadowOS.height                 = 41
-# $ShadowOS.location               = New-Object System.Drawing.Point(238,171)
+# $ShadowOS.location               = New-Object System.Drawing.Point(238,239)
 # $ShadowOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 # $ShadowOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 # $ShadowOS.Add_Click({
