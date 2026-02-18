@@ -67,28 +67,39 @@ $Requirement.location                 = New-Object System.Drawing.Point(41,355)
 $Requirement.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',8,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Italic))
 $Requirement.ForeColor                = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 
-$ShadowOS                        = New-Object system.Windows.Forms.Button
-$ShadowOS.text                   = "Launch ShadowOS"
-$ShadowOS.width                  = 123
-$ShadowOS.height                 = 41
-$ShadowOS.location               = New-Object System.Drawing.Point(238,239)
-$ShadowOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-$ShadowOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
-$ShadowOS.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
-})
-
 $InstallStore                            = New-Object system.Windows.Forms.Button
 $InstallStore.text                       = "Install 
 Microsoft Store"
 $InstallStore.width                      = 123
 $InstallStore.height                     = 41
-$InstallStore.location                   = New-Object System.Drawing.Point(238,171)
+$InstallStore.location                   = New-Object System.Drawing.Point(238,239)
 $InstallStore.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $InstallStore.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $InstallStore.Add_Click({
     Start-Job -ScriptBlock { wsreset -i }
 })
+
+$PostInstall                            = New-Object system.Windows.Forms.Button
+$PostInstall.text                       = "PostInstall Script"
+$PostInstall.width                      = 123
+$PostInstall.height                     = 41
+$PostInstall.location                   = New-Object System.Drawing.Point(238,171)
+$PostInstall.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+$PostInstall.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+$PostInstall.Add_Click({
+    Start-Job -ScriptBlock { powershell "irm cutt.ly/postinstall-confirmation | iex" }
+})
+
+# $ShadowOS                        = New-Object system.Windows.Forms.Button
+# $ShadowOS.text                   = "Launch ShadowOS"
+# $ShadowOS.width                  = 123
+# $ShadowOS.height                 = 41
+# $ShadowOS.location               = New-Object System.Drawing.Point(238,171)
+# $ShadowOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
+# $ShadowOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
+# $ShadowOS.Add_Click({
+#     Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
+# })
 
 $Batch                           = New-Object system.Windows.Forms.Button
 $Batch.text                      = "CMD Version"
@@ -112,6 +123,6 @@ $StartMenu.Add_Click({
     Start-Job -ScriptBlock { powershell "irm cutt.ly/manystart | iex" }
 })
 
-$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$ShadowOS,$InstallStore,$Batch,$StartMenu))
+$Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$InstallStore,$PostInstall,$Batch,$StartMenu)) # $ShadowOS
 
 [void]$Form.ShowDialog()
