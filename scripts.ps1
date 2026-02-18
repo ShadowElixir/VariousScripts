@@ -55,7 +55,7 @@ $BetterPwsh.location            = New-Object System.Drawing.Point(41,313)
 $BetterPwsh.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $BetterPwsh.ForeColor           = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $BetterPwsh.Add_Click({
-    Start-Process pwsh -ArgumentList "-Command", "irm cutt.ly/powerprofile | iex"
+    Start-Process pwsh -ArgumentList "-Command", { irm cutt.ly/powerprofile | iex }
 })
 
 $Requirement                          = New-Object system.Windows.Forms.Label
