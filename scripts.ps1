@@ -33,7 +33,7 @@ $ActivateWindows.location        = New-Object System.Drawing.Point(41,171)
 $ActivateWindows.Font            = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $ActivateWindows.ForeColor       = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $ActivateWindows.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm https://get.activated.win | iex" }
+    Start-Process powershell "irm https://get.activated.win | iex"
 })
 
 $DebloatWindows                  = New-Object system.Windows.Forms.Button
@@ -44,7 +44,7 @@ $DebloatWindows.location         = New-Object System.Drawing.Point(41,239)
 $DebloatWindows.Font             = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $DebloatWindows.ForeColor        = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $DebloatWindows.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/debloat-windows | iex" }
+    Start-Process powershell "irm cutt.ly/debloat-windows | iex"
 })
 
 $BetterPwsh                     = New-Object system.Windows.Forms.Button
@@ -55,7 +55,7 @@ $BetterPwsh.location            = New-Object System.Drawing.Point(41,313)
 $BetterPwsh.Font                = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $BetterPwsh.ForeColor           = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $BetterPwsh.Add_Click({
-    Start-Job -ScriptBlock { pwsh -Command "irm cutt.ly/powerprofile | iex" }
+    Start-Process pwsh -ArgumentList "-Command", "irm cutt.ly/powerprofile | iex"
 })
 
 $Requirement                          = New-Object system.Windows.Forms.Label
@@ -76,7 +76,7 @@ $InstallStore.location                   = New-Object System.Drawing.Point(238,1
 $InstallStore.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $InstallStore.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $InstallStore.Add_Click({
-    Start-Job -ScriptBlock { wsreset -i }
+    Start-Process powershell "wsreset -i"
 })
 
 $PostInstall                            = New-Object system.Windows.Forms.Button
@@ -87,7 +87,7 @@ $PostInstall.location                   = New-Object System.Drawing.Point(238,23
 $PostInstall.Font                       = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $PostInstall.ForeColor                  = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $PostInstall.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/postinstall-confirmation | iex" }
+    Start-Process powershell "irm cutt.ly/postinstall-confirmation | iex"
 })
 
 # $ShadowOS                        = New-Object system.Windows.Forms.Button
@@ -98,7 +98,7 @@ $PostInstall.Add_Click({
 # $ShadowOS.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 # $ShadowOS.ForeColor              = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 # $ShadowOS.Add_Click({
-#     Start-Job -ScriptBlock { powershell "irm cutt.ly/shadowos | iex" }
+#     Start-Process powershell "irm cutt.ly/shadowos | iex"
 # })
 
 $Batch                           = New-Object system.Windows.Forms.Button
@@ -109,7 +109,7 @@ $Batch.location                  = New-Object System.Drawing.Point(238,313)
 $Batch.Font                      = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $Batch.ForeColor                 = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $Batch.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/cmdscripts | iex" }
+    Start-Process powershell "irm cutt.ly/cmdscripts | iex"
 })
 
 $StartMenu                           = New-Object system.Windows.Forms.Button
@@ -120,7 +120,7 @@ $StartMenu.location                  = New-Object System.Drawing.Point(95,400)
 $StartMenu.Font                      = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $StartMenu.ForeColor                 = [System.Drawing.ColorTranslator]::FromHtml("#ffffff")
 $StartMenu.Add_Click({
-    Start-Job -ScriptBlock { powershell "irm cutt.ly/manystart | iex" }
+    Start-Process powershell "irm cutt.ly/manystart | iex"
 })
 
 $Form.controls.AddRange(@($VariousScripts,$Author,$ActivateWindows,$DebloatWindows,$BetterPwsh,$Requirement,$InstallStore,$PostInstall,$Batch,$StartMenu)) # $ShadowOS
